@@ -77,9 +77,9 @@ End if
 ```
 E.G callback URL
 ```VB.Net
- If objectMolpay.Skey()  <> objectMolpay.getKey1()  then   
+If objectMolpay.Skey()  <> objectMolpay.getKey1()  then   
   status= -1
- End if 
+End if 
  
 If objectMolpay.Status() = "00" then  
   'write your scripe here.... 
@@ -99,7 +99,6 @@ End if
 This is NOT official library from MOLPay. Therefore, no official support will be given to you. Please use this library as a guideline to integrate MOLPay service with VB.NET project. If there is any dispute between this document and official MOLPay release, please use the MOLPay version. 
 
 You also understand that you accept the risk and no other party will be held liable for any loss or damage cause by the usage of any information obtained in this page or software library.
-
 
 ### Changelog
 1. 2018-04-16 - v1.0.0 - Initial Release
