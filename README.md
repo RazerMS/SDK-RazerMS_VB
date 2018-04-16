@@ -47,13 +47,53 @@ objectMolpay.IPN()
 ### Notification URL wtih IPN(Instant Payment Notification)
 Set additional object for Notification URL 
 ```VB.Net
-objectMolpay.Nbcb = "2" 'Always equal to 2, which indicates this is a notification from MOLPay. 
+objectMolpay.Nbcb = request.Form("nbcb")  
 ```
 ### Verifying the integrity of data send by MOLPay
 ```VB.Net
 objectMolpay.getKey1() 
 ```
 Return value of the function is a string which contains the key1 value.
+
+### Sample of all 3 endpoints
+E.G return URL,notification script
+
+```VB.Net
+'invalid transaction if the key is different. Merchant might issue a requery to MOLPay to double check payment status with MOLPay. 
+ If objectMolpay.Skey()  <> objectMolpay.getKey1()  then   
+  status= -1
+ End if 
+ 
+If status = "00" then  
+  ’checking the validity of cart amount & orderid.  
+  ’if the verification test passed then can update the order status to paid. 
+  ’you can also do further checking on the paydate as well 
+Else
+  ’failure action  
+  ’Merchant might send query to MOLPay using merchant requery  
+  'to double check payment status for that particular order. 
+End if 
+  ’Merchant is to implement IPN to ack on receiving of payment status ’ regardless the payment status
+```
+E.G callback URL
+```VB.Net
+ If objectMolpay.Skey()  <> objectMolpay.getKey1()  then   
+  status= -1
+ End if 
+ 
+If objectMolpay.Status() = "00" then  
+  'write your scripe here.... 
+Else
+   'failure action   
+   'write your script here ..... 
+End if
+
+If objectMolpay.Nbcb = "1" then
+ 'callback IPN feedback to notified MOLPay 
+  response.write( “CBTOKEN:MPSTATOK”)
+  Exit [construct]
+End if 
+```
 
 ### Support or Contact
 This is NOT official library from MOLPay. Therefore, no official support will be given to you. Please use this library as a guideline to integrate MOLPay service with VB.NET project. If there is any dispute between this document and official MOLPay release, please use the MOLPay version. 
