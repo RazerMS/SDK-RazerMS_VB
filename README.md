@@ -73,7 +73,8 @@ Else
   ’Merchant might send query to MOLPay using merchant requery  
   'to double check payment status for that particular order. 
 End if 
-  ’Merchant is to implement IPN to ack on receiving of payment status ’ regardless the payment status
+  ’Merchant is to implement IPN to ack on receiving of payment status 
+  ’regardless the payment status
 ```
 E.G callback URL
 ```VB.Net
