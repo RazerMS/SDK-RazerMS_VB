@@ -1,4 +1,4 @@
-## Integrating MOLPay with SDK
+## Integrating MOLPay with VB SDK
 Version 1.0.0
 
 ### Pre-Requisite
