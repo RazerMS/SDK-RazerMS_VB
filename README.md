@@ -36,7 +36,7 @@ Set which type of enviroment with either **Sandbox** or **Production**
 objectMol.Type = "sandbox" ' "sandbox" or "production"
 ```
 ### IPN(Instant Payment Notification)
-Additional object must be set and passed when using IPN
+Additional object must be set when using IPN
 ```VB.Net
 objectMolpay.Treq = "1" 'Value is always 1. Do not change
 ```
