@@ -56,7 +56,7 @@ objectMolpay.getKey1()
 Return value of the function is a string which contains the key1 value.
 
 ### Sample of all 3 endpoints
-E.G return URL,notification script
+`E.G` return URL,notification script
 
 ```VB.Net
 'invalid transaction if the key is different. Merchant might issue a requery to MOLPay to double check payment status with MOLPay. 
@@ -65,18 +65,18 @@ E.G return URL,notification script
  End if 
  
 If status = "00" then  
-  ’checking the validity of cart amount & orderid.  
-  ’if the verification test passed then can update the order status to paid. 
-  ’you can also do further checking on the paydate as well 
+  'checking the validity of cart amount & orderid.  
+  'if the verification test passed then can update the order status to paid. 
+  'you can also do further checking on the paydate as well 
 Else
-  ’failure action  
-  ’Merchant might send query to MOLPay using merchant requery  
+  'failure action  
+  'Merchant might send query to MOLPay using merchant requery  
   'to double check payment status for that particular order. 
 End if 
-  ’Merchant is to implement IPN to ack on receiving of payment status 
-  ’regardless the payment status
+  'Merchant is to implement IPN to ack on receiving of payment status 
+  'regardless the payment status
 ```
-E.G callback URL
+`E.G` callback URL
 ```VB.Net
 If objectMolpay.Skey()  <> objectMolpay.getKey1()  then   
   status= -1
@@ -90,7 +90,7 @@ Else
 End if
 
 If objectMolpay.Nbcb = "1" then
- 'callback IPN feedback to notified MOLPay 
+ 'callback IPN feedback to notify MOLPay 
   response.write( “CBTOKEN:MPSTATOK”)
   Exit [construct]
 End if 
