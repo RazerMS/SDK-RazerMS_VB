@@ -56,7 +56,7 @@ objectMolpay.getKey1()
 Return value of the function is a string which contains the key1 value.
 
 ### Sample of all 3 endpoints
-`E.G` return URL,notification script
+`E.G` return & notification URL
 
 ```VB.Net
 'invalid transaction if the key is different. Merchant might issue a requery to MOLPay to double check payment status with MOLPay. 
