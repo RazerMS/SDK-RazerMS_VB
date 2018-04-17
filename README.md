@@ -109,5 +109,6 @@ Disclaimer
 ----------
 Any amendment by your end is at your own risk.
 
-### Changelog
+Changelog
+----------
 1. 2018-04-16 - v1.0.0 - Initial Release
