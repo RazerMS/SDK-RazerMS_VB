@@ -95,11 +95,19 @@ If objectMolpay.Nbcb = "1" then
   Exit [construct]
 End if 
 ```
+Support
+-------
 
-### Support or Contact
-This is NOT official library from MOLPay. Therefore, no official support will be given to you. Please use this library as a guideline to integrate MOLPay service with VB.NET project. If there is any dispute between this document and official MOLPay release, please use the MOLPay version. 
+Merchant Technical Support / Customer Care : support@molpay.com <br>
+Marketing Campaign : marketing@molpay.com <br>
+Channel/Partner Enquiry : channel@molpay.com <br>
+Media Contact : media@molpay.com <br>
+R&D and Tech-related Suggestion : technical@molpay.com <br>
+Abuse Reporting : abuse@molpay.com
 
-You also understand that you accept the risk and no other party will be held liable for any loss or damage cause by the usage of any information obtained in this page or software library.
+Disclaimer
+----------
+Any amendment by your end is at your own risk.
 
 ### Changelog
 1. 2018-04-16 - v1.0.0 - Initial Release
