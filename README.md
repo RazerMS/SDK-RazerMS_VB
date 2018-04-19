@@ -1,5 +1,5 @@
 ## Integrating MOLPay with VB SDK
-Version 1.0.0
+Version 1.0.1 (Updated)
 
 ### Pre-Requisite
 1. Visual Studio 2012 or above.
@@ -44,8 +44,8 @@ Call the IPN function
 ```VB.Net
 objectMolpay.IPN()
 ```
-### Notification URL wtih IPN(Instant Payment Notification)
-Set additional object for Notification URL 
+### Notification & Callback URL with IPN 
+Set additional object for Notification & Callback URL 
 ```VB.Net
 objectMolpay.Nbcb = request.Form("nbcb")  
 ```
@@ -78,22 +78,20 @@ End if
 ```
 `E.G` callback URL
 ```VB.Net
-If objectMolpay.Skey()  <> objectMolpay.getKey1()  then   
+If objectMolpay.Skey <> objectMolpay.getKey1 then   
   status= -1
 End if 
  
-If objectMolpay.Status() = "00" then  
+If objectMolpay.Status = "00" then  
   'write your scripe here.... 
 Else
    'failure action   
    'write your script here ..... 
 End if
 
-If objectMolpay.Nbcb = "1" then
- 'callback IPN feedback to notify MOLPay 
-  response.write( “CBTOKEN:MPSTATOK”)
-  Exit [construct]
-End if 
+'callback IPN feedback to notify MOLPay 
+response.write( objectMolpay.IPN)
+ 
 ```
 Support
 -------
@@ -111,4 +109,5 @@ Any amendment by your end is at your own risk.
 
 Changelog
 ----------
-1. 2018-04-16 - v1.0.0 - Initial Release
+1. 2018-04-17 - v1.0.0 - Initial Release
+2. 2018-04-19 - v1.0.1 - Update the SDK Structure
