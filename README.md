@@ -62,7 +62,7 @@ Return value of the function is a string which contains the key1 value.
 ```VB.Net
 'invalid transaction if the key is different. Merchant might issue a requery to MOLPay to double check payment status with MOLPay. 
  If objectMolpay.Skey()  <> objectMolpay.getKey1()  then   
-  status= -1
+  objectMolpay.Status= -1
  End if 
  
 If objectMolpay.Status = "00" then  
