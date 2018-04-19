@@ -64,7 +64,7 @@ Return value of the function is a string which contains the key1 value.
   status= -1
  End if 
  
-If status = "00" then  
+If objectMolpay.Status = "00" then  
   'checking the validity of cart amount & orderid.  
   'if the verification test passed then can update the order status to paid. 
   'you can also do further checking on the paydate as well 
