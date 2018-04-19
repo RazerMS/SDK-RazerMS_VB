@@ -8,9 +8,10 @@ Version 1.0.1 (Updated)
 
 ### Installation
 #### Via File Explorer
-1. Download `MOLPay.dll` library.
-2. Open Visual Studio project, right click on your project name in `Solution Explorer` and choose `Add Reference`.
-3. Click `Browse` to search for downloaded library. Click `OK` to add.
+1. Download `MOLPayVB.zip` file.
+2. Extract the zip file. 
+3. Open Visual Studio project, right click on your project name in `Solution Explorer` and choose `Add Reference`.
+4. Click `Browse` to search for downloaded MOLPayVB.dll. Click `OK` to add.
 
 ### Usage
 Create MOLPayVB object in order to access the properties of Base: 
