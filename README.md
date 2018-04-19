@@ -80,7 +80,7 @@ End if
 `E.G` callback URL
 ```VB.Net
 If objectMolpay.Skey <> objectMolpay.getKey1 then   
-  status= -1
+  objectMolpay.Status= -1
 End if 
  
 If objectMolpay.Status = "00" then  
