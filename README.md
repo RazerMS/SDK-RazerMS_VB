@@ -1,5 +1,5 @@
 ## Integrating MOLPay with VB SDK
-Version 1.0.1 (Updated)
+Version 1.1.0 (Updated)
 
 ### Pre-Requisite
 1. Visual Studio 2012 or above.
@@ -140,3 +140,4 @@ Changelog
 ----------
 1. 2018-04-17 - v1.0.0 - Initial Release
 2. 2018-04-19 - v1.0.1 - Update the SDK Structure
+3. 2018-04-20 - v1.1.0 - Add payment page integration
