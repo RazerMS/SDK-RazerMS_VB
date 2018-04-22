@@ -14,12 +14,44 @@ Version 1.0.1 (Updated)
 4. Click `Browse` to search for downloaded MOLPayVB.dll. Click `OK` to add.
 
 ### Usage
-Create MOLPayVB object in order to access the properties of Base: 
+1. Create MOLPayVB object in order to access the properties of Base: 
 
 ```VB.Net
 Dim objectMolpay As New MOLPayVB.MOLPay.Base
 ```
-Set the values received from MOLPay's payment page 
+2. Set which type of enviroment with either **Sandbox** or **Production**
+```VB.Net
+objectMol.Type = "sandbox" ' "sandbox" or "production"
+```
+### Payment Page integration
+Set these needed objects that will send the buyer infromation to MOLPay hosted payment page.
+```VB
+'Value set are examples
+objectMolpay.MerchantID = "MOLPay" 'Replace with your Merchant ID provided  
+objectMolpay.Vkey = "xxxx" 'Replace ​xxxxxxxxxx with your MOLPay Secret_Key
+objectMolpay.Amounut = "1.1"
+objectMolpay.OrderID = "Testing123"
+```
+Optional objects. Details can be key in at the payment page as well.
+```VB
+objectMolpay.Bill_Name = "Molpay Tester"
+objectMolpay.Bill_email = "molpay@molpay.com
+objectMolpay.Bill_desc = "Send me money"
+objectMolpay.Currency = "MYR"
+objectMolpay.Country = "Malaysia"
+```
+It is not needed to set all the Endpoint URLs. If not set,by default the Endpoint URLs would be taken from Merchant Portal's End Point setting.
+```VB
+objectMolpay.ReturnUrl = "molpay.com" 'Desired returned page after payment page
+objectMolpay.NotificationUrl = "molpay.com" 
+objectMolpay.CallbackUrl = "molpay.com"
+```
+Objects that are set will be send to hosted payment page by calling a function.
+```VB
+HttpContext.Current.Response.Write(ob.hostedPay())
+```
+### Payment endpoint integration
+Set the values received from MOLPay's payment page.
 ```VB.Net
 objectMolpay.Vkey = "xxxxxxx"   'Replace ​xxxxxxxxxx with your MOLPay Secret_Key
 objectMolpay.TranID = request.Form("tranID")
@@ -32,11 +64,7 @@ objectMolpay.Appcode = request.Form("appcode")
 objectMolpay.Paydate = request.Form("paydate")
 objectMolpay.Skey = request.Form("skey")
 ```
-Set which type of enviroment with either **Sandbox** or **Production**
-```VB.Net
-objectMol.Type = "sandbox" ' "sandbox" or "production"
-```
-### IPN(Instant Payment Notification)
+#### IPN(Instant Payment Notification)
 Additional object must be set when using IPN
 ```VB.Net
 objectMolpay.Treq = "1" 'Value is always 1. Do not change
@@ -45,21 +73,21 @@ Call the IPN function
 ```VB.Net
 objectMolpay.IPN()
 ```
-### Notification & Callback URL with IPN 
+#### Notification & Callback URL with IPN 
 Set additional object for Notification & Callback URL 
 ```VB.Net
 objectMolpay.Nbcb = request.Form("nbcb")  
 ```
-### Verifying the integrity of data send by MOLPay
+#### Verifying the integrity of data send by MOLPay
 ```VB.Net
 objectMolpay.getKey1() 
 ```
 Return value of the function is a string which contains the key1 value.
 
-### Sample of all 3 endpoints
+#### Sample of all 3 endpoints
 `E.G` return & notification URL
 
-```VB.Net
+```VB
 'invalid transaction if the key is different. Merchant might issue a requery to MOLPay to double check payment status with MOLPay. 
  If objectMolpay.Skey()  <> objectMolpay.getKey1()  then   
   objectMolpay.Status= -1
