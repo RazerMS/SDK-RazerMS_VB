@@ -34,14 +34,16 @@ objectMolpay.OrderID = "Testing123"
 ```
 Optional objects. Details can be key in at the payment page as well.
 ```VB
+'Value set are examples
 objectMolpay.Bill_Name = "Molpay Tester"
 objectMolpay.Bill_email = "molpay@molpay.com
 objectMolpay.Bill_desc = "Send me money"
 objectMolpay.Currency = "MYR"
 objectMolpay.Country = "Malaysia"
 ```
-It is not needed to set all the Endpoint URLs. If not set,by default the Endpoint URLs would be taken from Merchant Portal's End Point setting.
+It is not needed to set all the Endpoint URLs. If not set,by default the Endpoint URLs would be taken from Merchant Portal's End Point settings.
 ```VB
+'Value set are examples
 objectMolpay.ReturnUrl = "molpay.com" 'Desired returned page after payment page
 objectMolpay.NotificationUrl = "molpay.com" 
 objectMolpay.CallbackUrl = "molpay.com"
