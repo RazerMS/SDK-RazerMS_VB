@@ -1,5 +1,5 @@
 ## Integrating MOLPay with VB SDK
-Version 1.1.0 (Updated)
+Version 1.2.0 (Updated)
 
 ### Pre-Requisite
 1. Visual Studio 2012 or above.
@@ -285,7 +285,8 @@ FAQ
 1. Simply right-click the "References" folder and select "Manage NuGet Packages...".
 2. Select the Browse tab.
 3. In the search bar in the upper left type "Newtonsoft.Json".
-4. Click "Install" and you're done.
+4. Click "Install".
+
 **OR**
 1. Remove Newtonsoft.Jason on reference.
 
