@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/38641542/39353138-654385dc-4a39-11e8-9710-19e5f03ec62e.jpg">
+
 ## Integrating MOLPay with VB SDK
 Version 1.2.0 (Updated)
 
