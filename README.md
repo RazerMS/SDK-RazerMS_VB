@@ -1,4 +1,4 @@
-## [Mobile SDK] – RazerMS VB
+## [SDK] – RazerMS VB
 ![sdk](https://user-images.githubusercontent.com/38641542/74423739-b4440a00-4e8b-11ea-8d95-016d25d26e87.jpg)<br>
 Version 1.2.0 (Updated)
 
